@@ -3,64 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <title>School System</title>
 </head>
 <body>
+ 
     <header>
-        <h1>Your Website</h1>
-        <nav>
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Services</a>
-            <a href="#">Portfolio</a>
-            <a href="#">Contact</a>
+        <nav id="desktop-nav">
+           <div class="logo">School system </div>
+       <div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#Students">Students</a></li>
+               
+            </ul>
+        </div>
         </nav>
-        <br><br>
-        <form id="studentForm">
-            <label for="fullName">Full Name:</label>
-            <input type="text" id="fullName" required><br><br>
-            
-            <label for="dob">Date of Birth:</label>
-            <input type="date" id="dob" required><br><br>
-            
-            <label for="gender">Gender:</label>
-            <select id="gender" required>
-                <option value="male">Male</option>
-                <option value="female">Female</option>
-                <option value="other">Other</option>
-            </select><br><br>
-            
-            <label for="phoneNumber">Phone Number:</label>
-            <input type="tel" id="phoneNumber" required><br><br>
-            
-            <label for="grade">Grade:</label>
-            <input type="number" id="grade" required><br><br>
-            
-            <button type="submit">Submit</button>
-        </form>
-    
-        <!-- Table to display student information -->
-        <table id="studentTable">
-            <thead>
-                <tr>
-                    <th>Full Name</th>
-                    <th>Date of Birth</th>
-                    <th>Gender</th>
-                    <th>Phone Number</th>
-                    <th>Grade</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Data will be populated here -->
-            </tbody>
-        </table>
-
     </header>
+
+    <main>
+        <section id="formSection">
+            <h2>Add a Student</h2>
+            <form id="studentForm">
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" required><br><br>
+
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" required><br><br>
+
+                <label for="gender">Gender:</label>
+                <select id="gender" required>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select><br><br>
+
+                <label for="major">Major:</label>
+                <select id="major" required>
+                    <option value="Administration">Administration</option>
+                    <option value="IT">IT</option>
+                    <option value="Science">Science</option>
+                    <option value="Art">Art</option>
+                </select><br><br>
+
+                <label for="imageUrl">Image URL:</label>
+                <input type="text" id="imageUrl" required><br><br>
+
+                <label for="phoneNumber">Phone Number:</label>
+                <input type="text" id="phoneNumber" required><br><br>
+
+                <label for="grade">Grade:</label>
+                <input type="text" id="grade" required><br><br>
+
+                <input type="submit" value="Submit" id="Submit">
+            </form>
+        </section>
+    <section>
+        <h2>Student Table</h2>
+        <div class="table-container">
+            <table id="studentTable">
+                <thead>
+                    <tr>
+                        <th>Full Name</th>
+                        <th>Date of Birth</th>
+                        <th>Gender</th>
+                        <th>Phone Number</th>
+                        <th>Grade</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Student data rows will be added here dynamically -->
+                </tbody>
+            </table>
+        </div>
+    </section>
+        <section id="studentSection">
+            <h2>Students</h2>
+            
+            <div id="studentCards">
+                <!-- Student cards will be rendered here -->
+            </div>
+        </section>
+    </main>
+
     <footer>
-        <p>&copy; 2023 Your Website Name</p>
+        <p>&copy; 2023 School System</p>
     </footer>
 
-    <script src="app.js"></script>    
+    <script src="app.js"></script>
 </body>
 </html>
